@@ -1,2 +1,2 @@
 # Youtube-API
-For playing youtube videos in our app. Youtube API will be very usefull
+For playing youtube videos inside our app. Youtube API is very usefull and easy to handle videos.
