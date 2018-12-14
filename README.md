@@ -36,44 +36,9 @@ package info.androidhive.youtubeplayer;
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp" />
-
-
-
-
-
-
-12. Add below code to MainActivity
-MainActivity.java
-package info.androidhive.youtubeplayer;
- 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Toast;
- 
-import com.google.android.youtube.player.YouTubeBaseActivity;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayer.PlayerStyle;
-import com.google.android.youtube.player.YouTubePlayerView;
-    public class MainActivity extends YouTubeBaseActivity implements
-            YouTubePlayer.OnInitializedListener {
-        private static final int RECOVERY_DIALOG_REQUEST = 1;
-        // YouTube player view
-        private YouTubePlayerView youTubeView;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            setContentView(R.layout.activity_main);
-            youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
-            // Initializing video player with developer key
-            youTubeView.initialize(Config.DEVELOPER_KEY, this);
-        }
-        @Override
+12. In MainActivity
+youTubeView.initialize(Config.DEVELOPER_KEY, this);
+@Override
         public void onInitializationFailure(YouTubePlayer.Provider provider,
                                             YouTubeInitializationResult errorReason) {
             if (errorReason.isUserRecoverableError()) {
@@ -106,4 +71,3 @@ import com.google.android.youtube.player.YouTubePlayerView;
             return (YouTubePlayerView) findViewById(R.id.youtube_view);
         }
     }
-
