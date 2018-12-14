@@ -1,3 +1,5 @@
+Youtube video player API is supported to all versions of Android.
+
 Youtube API Step wise guide: 
 
 Follow below steps for using youtube API:
